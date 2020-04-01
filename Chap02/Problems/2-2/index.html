@@ -5722,8 +5722,7 @@
 <p><strong>Initialization:</strong> Initially the subarray $A[1..i − 1]$ is empty and trivially this is the smallest element of the subarray.</p>
 <p><strong>Maintenance:</strong> From part (b), after the execution of the inner loop, $A[i]$ will be the smallest element of the subarray $A[i..n]$. And in the beginning of the outer loop, $A[1..i − 1]$ consists of elements that are smaller than the elements of $A[i..n]$, in sorted order. So, after the execution of the outer loop, subarray $A[1..i]$ will consists of elements that are smaller than the elements of $A[i + 1..n]$, in sorted order.</p>
 <p><strong>Termination:</strong> The loop terminates when $i = A.length$. At that point the array $A[1..n]$ will consists of all elements in sorted order.</p>
-<p><strong>d.</strong> The $i$th iteration of the <strong>for</strong> loop of lines 1-4 will cause $n − i$ iterations of the <strong>for</strong> loop of lines 2-4, each with constant time execution, so the worst-case running time of bubble sort is $\Theta(n^2)$ which is same as the worst-case running time of insertion sort. </p>
-<p>However, insertion sort has best-case running time of $\Theta(n)$ which is faster than the best-case running time $\Theta(n^2)$ of bubble sort.</p>
+<p><strong>d.</strong> The $i$th iteration of the <strong>for</strong> loop of lines 1-4 will cause $n − i$ iterations of the <strong>for</strong> loop of lines 2-4, each with constant time execution, so the worst-case running time of bubble sort is $\Theta(n^2)$ which is same as the worst-case running time of insertion sort.</p>
                 
                   
                 
