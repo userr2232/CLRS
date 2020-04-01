@@ -5698,7 +5698,7 @@
 <p><strong>c.</strong> Use an order-statistic algorithm to find the $i$th largest number, partition around that number, and sort the $i$ largest numbers.</p>
 </blockquote>
 <p><strong>a.</strong> The running time of sorting the numbers is $O(n\lg n)$, and the running time of listing the $i$ largest is $O(i)$. Therefore, the total running time is $O(n\lg n + i)$.</p>
-<p><strong>b.</strong> The running time of building a max-priority queue from the numbers is $O(n\lg n)$, and the runnign time of each call $\text{EXTRACT-MAX}$ is $O(\lg n)$. Therefore, the total running time is $O((n + i)\lg n)$.</p>
+<p><strong>b.</strong> The running time of building a max-priority queue (using a heap) from the numbers is $O(n)$, and the running time of each call $\text{EXTRACT-MAX}$ is $O(\lg n)$. Therefore, the total running time is $O(n + i\lg n)$.</p>
 <p><strong>c.</strong> The running time of finding and partitioning around the $i$th largest number is $O(n)$, and the running time of sorting the $i$ largest numbers is $O(i\lg i)$. Therefore, the total running time is $O(n + i\lg i)$.</p>
                 
                   
