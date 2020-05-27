@@ -6256,7 +6256,7 @@ $$</p>
 <p>We count the number of times that we reference a different entry in $m$ than the one we are computing, that is, $2$ times the number of times that line 10 runs.</p>
 <p>$$
 \begin{aligned}
-\sum_{l = 2}^n \sum_{i = l}^{n - l + 1} \sum_{k = i}^{i + l - 2} 2
+\sum_{l = 2}^n \sum_{i = 1}^{n - l + 1} \sum_{k = i}^{i + l - 2} 2
     &amp; = \sum_{l = 2}^n \sum_{i = 1}^{n - l + 1} 2(l - 1) \\
     &amp; = \sum_{l = 2}^n 2(l - 1)(n - l + 1) \\
     &amp; = \sum_{l = 1}^{n - 1} 2l(n - l) \\

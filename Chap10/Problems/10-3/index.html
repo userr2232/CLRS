@@ -6120,14 +6120,27 @@
 <p><strong>e.</strong></p>
 <p>$$
 \begin{aligned}
-\text E[X_t] &amp; \le \sum_{r = 1}^n (1 - r / n)^t \\
-             &amp; =   \sum_{r = 1}^n \sum_{i = 0}^t \binom{t}{i} (-r / n)^i \\
-             &amp; =   \sum_{i = 0}^t \sum_{r = 1}^n \binom{t}{i} (-r / n)^i \\
-             &amp; =   \sum_{i = 0}^t \binom{t}{i} (-1)^i \Bigg(n^i - 1 + \sum_{r = 0}^{n - 1} r^t\Bigg) / n \\
-             &amp; \le \sum_{i = 0}^t \binom{t}{i} (-1)^i \Big(n^i - 1 + \frac{n^{i + 1}}{i + 1}) / n \\
-             &amp; \le \sum_{i = 0}^t \binom{t}{i} (-1)^i \frac{n^i}{i + 1} \\
-             &amp; =   \frac{1}{t + 1} \sum_{i = 0}^t \binom{t + 1}{i + 1} (-n)^i \\
-             &amp; \le \frac{(1 - n)^{t + 1}}{t + 1}.
+\text E[X_t]
+    &amp; \le \sum_{r = 1}^n (1 - r / n)^t &amp; \text{from part (c)} \\
+    &amp; =   \sum_{r = 1}^n \frac{(n - r)^t}{n^t} \\
+    &amp; =   \frac{1}{n^t} \sum_{r = 1}^n (n - r)^t,
+\end{aligned}
+$$</p>
+<p>and</p>
+<p>$$
+\begin{aligned}
+\sum_{r = 1}^n (n - r)^t
+    &amp; = (n - 1)^t + (n - 2)^t + \cdots + 1^t + 0^t \\
+    &amp; = \sum_{r = 0}^{n - 1} r^t.
+\end{aligned}
+$$</p>
+<p>So,</p>
+<p>$$
+\begin{aligned}
+\text E[X_t]
+    &amp; =   \frac{1}{n^t} \sum_{r = 0}^{n - 1} r^t \\
+    &amp; \le \frac{1}{n^t} \cdot \frac{n^{t + 1}}{t + 1} &amp; \text{from part (d)} \\
+    &amp; =   \frac{n}{t + 1}.
 \end{aligned}
 $$</p>
 <p><strong>f.</strong> We just put together parts (b) and (e) to get that it runs in time $O(t + n / (t + 1))$. But, this is the same as $O(t + n / t)$.</p>
