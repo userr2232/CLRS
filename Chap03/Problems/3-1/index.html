@@ -6078,7 +6078,7 @@
 <p><strong>e.</strong> If $k &lt; d$, then $p(n) = \omega(n^k)$.</p>
 </blockquote>
 <p>Let's see that $p(n) = O(n^d)$. We need do pick $c = a_d + b$, such that</p>
-<p>$$\sum\limits_{i = 0}^d = a_d n^d + a_{d - 1}n^{d - 1} + \cdots + a_1n + a_0 \le cn^d.$$</p>
+<p>$$\sum\limits_{i = 0}^d a_i n^i = a_d n^d + a_{d - 1}n^{d - 1} + \cdots + a_1n + a_0 \le cn^d.$$</p>
 <p>When we divide by $n^d$, we get</p>
 <p>$$c = a_d + b \ge a_d + \frac{a_{d - 1}}n + \frac{a_{d - 2}}{n^2} + \cdots + \frac{a_0}{n^d}.$$</p>
 <p>and</p>
